@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Equus Chile | Calendario Maestro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-background": "#1c1c19",
+              "error": "#ba1a1a",
+              "primary-container": "#2d5a27",
+              "surface-container-low": "#f6f3ee",
+              "on-error-container": "#93000a",
+              "error-container": "#ffdad6",
+              "on-error": "#ffffff",
+              "on-primary": "#ffffff",
+              "background": "#fcf9f4",
+              "inverse-primary": "#a1d494",
+              "surface-tint": "#3b6934",
+              "primary": "#154212",
+              "surface-container-highest": "#e5e2dd",
+              "on-tertiary-fixed": "#261900",
+              "on-surface": "#1c1c19",
+              "on-secondary": "#ffffff",
+              "outline": "#72796e",
+              "tertiary": "#483611",
+              "on-surface-variant": "#42493e",
+              "surface": "#fcf9f4",
+              "tertiary-fixed-dim": "#dfc392",
+              "surface-container-high": "#ebe8e3",
+              "primary-fixed": "#bcf0ae",
+              "outline-variant": "#c2c9bb",
+              "surface-container-lowest": "#ffffff",
+              "inverse-on-surface": "#f3f0eb",
+              "on-tertiary-fixed-variant": "#57441e",
+              "secondary": "#79573f",
+              "tertiary-fixed": "#fcdfab",
+              "surface-variant": "#e5e2dd",
+              "surface-bright": "#fcf9f4",
+              "on-tertiary-container": "#dbbf8e",
+              "on-primary-fixed": "#002201",
+              "secondary-fixed": "#ffdcc6",
+              "inverse-surface": "#31302d",
+              "tertiary-container": "#614d26",
+              "on-secondary-container": "#7a5840",
+              "secondary-fixed-dim": "#eabda0",
+              "on-primary-fixed-variant": "#23501e",
+              "on-secondary-fixed": "#2d1604",
+              "on-secondary-fixed-variant": "#5f402a",
+              "surface-dim": "#dcdad5",
+              "secondary-container": "#ffd1b3",
+              "surface-container": "#f0ede8",
+              "on-primary-container": "#9dd090",
+              "on-tertiary": "#ffffff",
+              "primary-fixed-dim": "#a1d494"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed min-h-screen">
+<!-- Sidebar Navigation -->
+<aside class="h-screen w-64 fixed left-0 top-0 flex flex-col bg-surface-container-low dark:bg-stone-900 z-40">
+<div class="flex flex-col h-full py-6 gap-2">
+<div class="px-6 mb-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined">school</span>
+</div>
+<div>
+<h1 class="font-headline text-xl text-primary leading-tight">Club Hípico</h1>
+<p class="font-label text-[10px] uppercase tracking-wider text-stone-500">Portal Admin</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="text-stone-600 dark:text-stone-400 hover:bg-stone-200 dark:hover:bg-stone-800 rounded-lg mx-2 px-4 py-3 flex items-center gap-3 transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label text-sm uppercase tracking-wide">Gestión Académica</span>
+</a>
+<a class="bg-primary text-white rounded-lg mx-2 px-4 py-3 flex items-center gap-3" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+<span class="font-label text-sm uppercase tracking-wide">Calendario Maestro</span>
+</a>
+<a class="text-stone-600 dark:text-stone-400 hover:bg-stone-200 dark:hover:bg-stone-800 rounded-lg mx-2 px-4 py-3 flex items-center gap-3 transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-label text-sm uppercase tracking-wide">Estudiantes</span>
+</a>
+<a class="text-stone-600 dark:text-stone-400 hover:bg-stone-200 dark:hover:bg-stone-800 rounded-lg mx-2 px-4 py-3 flex items-center gap-3 transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">badge</span>
+<span class="font-label text-sm uppercase tracking-wide">Profesores</span>
+</a>
+<a class="text-stone-600 dark:text-stone-400 hover:bg-stone-200 dark:hover:bg-stone-800 rounded-lg mx-2 px-4 py-3 flex items-center gap-3 transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">shelves</span>
+<span class="font-label text-sm uppercase tracking-wide">Mapa de Pesebreras</span>
+</a>
+<a class="text-stone-600 dark:text-stone-400 hover:bg-stone-200 dark:hover:bg-stone-800 rounded-lg mx-2 px-4 py-3 flex items-center gap-3 transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-label text-sm uppercase tracking-wide">Reportes</span>
+</a>
+</nav>
+<div class="px-4 mt-auto pt-6 border-t border-surface-container">
+<button class="w-full py-3 px-4 bg-secondary text-on-primary rounded-xl font-medium text-sm flex items-center justify-center gap-2 hover:opacity-90 transition-all">
+<span class="material-symbols-outlined text-sm">add</span>
+                    Nueva Inscripción
+                </button>
+<div class="mt-4 space-y-1">
+<a class="text-stone-500 hover:text-primary px-4 py-2 flex items-center gap-3 text-sm" href="#">
+<span class="material-symbols-outlined text-lg">help</span>
+                        Centro de Ayuda
+                    </a>
+<a class="text-stone-500 hover:text-error px-4 py-2 flex items-center gap-3 text-sm" href="#">
+<span class="material-symbols-outlined text-lg">logout</span>
+                        Cerrar Sesión
+                    </a>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 p-8">
+<!-- Header -->
+<header class="flex justify-between items-end mb-10">
+<div>
+<p class="font-label text-sm uppercase tracking-[0.2em] text-secondary mb-1">Gestión del Recinto</p>
+<h2 class="font-headline text-4xl text-on-surface">Calendario Maestro</h2>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex bg-surface-container p-1 rounded-xl">
+<button class="px-6 py-2 bg-white shadow-sm rounded-lg text-sm font-semibold text-primary">Vista de Agenda</button>
+<button class="px-6 py-2 text-sm font-medium text-stone-500">Disponibilidad de Profesores</button>
+</div>
+<button class="p-3 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="flex items-center gap-3 bg-surface-container rounded-full pl-2 pr-4 py-2">
+<img class="w-8 h-8 rounded-full object-cover" data-alt="professional portrait of a equestrian center administrator in a outdoor setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3S5cOkhreeRheDk-5VgG1QYMDhyfRVivzFfOFhNpte8e8ZUFoMVKxgVeiueo32DaMp2ZNBqmf2ZieaKXQZsMY5iW11LJFw_Ttc4ul16ulj5VGxd8Iszz_RF0nUtvO7cTS8eYnkincKNC9UyWoJ4-tFN8ky41P1Ghv59aAF4ojvfzRRE5cqPP6RxwFE41rz-zVOCfxc-GyKwZPNQWYAw_Myfm4XV-UyPGVJBMNXA2zKecoblhaZL6ptBcSvPsrWyOOmTTx2mYgKvAm"/>
+<span class="text-sm font-medium">Portal Admin</span>
+</div>
+</div>
+</header>
+<!-- Filters & Legend -->
+<section class="grid grid-cols-12 gap-6 mb-8 items-start">
+<div class="col-span-8 bg-surface-container-lowest p-6 rounded-2xl shadow-sm flex flex-wrap gap-6 items-center">
+<div class="flex-1 min-w-[200px]">
+<label class="font-label text-[10px] uppercase tracking-wider text-stone-500 block mb-2">Filtrar por Profesor</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low border-none rounded-lg py-2.5 px-4 text-sm focus:ring-2 focus:ring-primary/20 appearance-none">
+<option>Todos los Instructores</option>
+<option>Mateo Valenzuela</option>
+<option>Isabella Rossi</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-stone-400 pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="flex-1 min-w-[200px]">
+<label class="font-label text-[10px] uppercase tracking-wider text-stone-500 block mb-2">Filtrar por Estudiante</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low border-none rounded-lg py-2.5 px-4 text-sm focus:ring-2 focus:ring-primary/20 appearance-none">
+<option>Todos los Estudiantes</option>
+<option>Benjamín Soto</option>
+<option>Sofía Mendoza</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-stone-400 pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="flex items-center gap-4 pt-6">
+<button class="flex items-center gap-2 px-5 py-2.5 bg-primary text-on-primary rounded-lg text-sm font-medium transition-all hover:scale-[1.02] active:scale-95">
+<span class="material-symbols-outlined text-lg">tune</span>
+                        Aplicar Filtros
+                    </button>
+<button class="text-stone-400 hover:text-stone-600 text-sm font-medium">Limpiar Todo</button>
+</div>
+</div>
+<div class="col-span-4 bg-surface-container-low p-6 rounded-2xl">
+<h4 class="font-label text-[10px] uppercase tracking-widest text-secondary mb-4">Leyenda y Estado</h4>
+<div class="grid grid-cols-2 gap-y-4 gap-x-2">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-primary"></div>
+<span class="text-xs font-medium">Individual ($45k)</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-secondary"></div>
+<span class="text-xs font-medium">Grupal ($30k)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xs text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-xs font-medium">Pagado</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xs text-error">warning</span>
+<span class="text-xs font-medium">Conflicto</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Layout Grid: Calendar & Details Sidebar -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Calendar Canvas -->
+<div class="col-span-8">
+<div class="bg-surface-container-lowest rounded-3xl p-8 shadow-sm">
+<div class="flex justify-between items-center mb-8">
+<div class="flex items-center gap-4">
+<h3 class="font-headline text-2xl">Noviembre 2024</h3>
+<div class="flex gap-1">
+<button class="p-1 hover:bg-surface-container rounded-md"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="p-1 hover:bg-surface-container rounded-md"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<button class="flex items-center gap-2 text-primary font-semibold text-sm">
+<span class="material-symbols-outlined">today</span>
+                            Ir a Hoy
+                        </button>
+</div>
+<!-- Calendar Grid -->
+<div class="grid grid-cols-7 border-t border-l border-surface-container">
+<!-- Days Header -->
+<div class="p-4 border-r border-b border-surface-container bg-surface-container-low text-center font-label text-[10px] uppercase tracking-widest text-stone-500">Lun</div>
+<div class="p-4 border-r border-b border-surface-container bg-surface-container-low text-center font-label text-[10px] uppercase tracking-widest text-stone-500">Mar</div>
+<div class="p-4 border-r border-b border-surface-container bg-surface-container-low text-center font-label text-[10px] uppercase tracking-widest text-stone-500">Mié</div>
+<div class="p-4 border-r border-b border-surface-container bg-surface-container-low text-center font-label text-[10px] uppercase tracking-widest text-stone-500">Jue</div>
+<div class="p-4 border-r border-b border-surface-container bg-surface-container-low text-center font-label text-[10px] uppercase tracking-widest text-stone-500">Vie</div>
+<div class="p-4 border-r border-b border-surface-container bg-surface-container-low text-center font-label text-[10px] uppercase tracking-widest text-stone-500">Sáb</div>
+<div class="p-4 border-r border-b border-surface-container bg-surface-container-low text-center font-label text-[10px] uppercase tracking-widest text-stone-500">Dom</div>
+<!-- Row 1 (Partial) -->
+<div class="h-32 p-3 border-r border-b border-surface-container opacity-30">28</div>
+<div class="h-32 p-3 border-r border-b border-surface-container opacity-30">29</div>
+<div class="h-32 p-3 border-r border-b border-surface-container opacity-30">30</div>
+<div class="h-32 p-3 border-r border-b border-surface-container opacity-30">31</div>
+<!-- Nov 1st -->
+<div class="h-32 p-3 border-r border-b border-surface-container relative group hover:bg-surface-container-low transition-colors">
+<span class="text-sm font-medium text-stone-400">1</span>
+<div class="mt-2 space-y-1">
+<div class="bg-primary text-white text-[10px] p-1.5 rounded-md flex items-center justify-between">
+<span>Individual - Mateo</span>
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+</div>
+<div class="h-32 p-3 border-r border-b border-surface-container bg-surface-container-low/50">
+<span class="text-sm font-medium text-stone-400">2</span>
+</div>
+<div class="h-32 p-3 border-r border-b border-surface-container bg-surface-container-low/50">
+<span class="text-sm font-medium text-stone-400">3</span>
+</div>
+<!-- Row 2 -->
+<div class="h-32 p-3 border-r border-b border-surface-container relative">
+<span class="text-sm font-medium">4</span>
+<div class="mt-2 space-y-1">
+<div class="bg-secondary text-white text-[10px] p-1.5 rounded-md">Grupal - Isabella</div>
+<div class="bg-primary/10 text-primary text-[10px] p-1.5 rounded-md border border-primary/20">Individual - Mateo</div>
+</div>
+</div>
+<div class="h-32 p-3 border-r border-b border-surface-container">
+<span class="text-sm font-medium">5</span>
+<div class="mt-2">
+<div class="bg-error-container text-on-error-container text-[10px] p-1.5 rounded-md flex items-center gap-1 border border-error/20">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+                                    Caballo con Doble Reserva
+                                </div>
+</div>
+</div>
+<div class="h-32 p-3 border-r border-b border-surface-container bg-primary-container/10 border-2 border-primary/40 shadow-inner">
+<span class="text-sm font-bold text-primary">6</span>
+<div class="mt-2 space-y-1">
+<div class="bg-primary text-white text-[10px] p-1.5 rounded-md font-bold">Clase de Hoy</div>
+</div>
+</div>
+<div class="h-32 p-3 border-r border-b border-surface-container">
+<span class="text-sm font-medium">7</span>
+</div>
+<div class="h-32 p-3 border-r border-b border-surface-container">
+<span class="text-sm font-medium">8</span>
+</div>
+<div class="h-32 p-3 border-r border-b border-surface-container bg-surface-container-low/50">
+<span class="text-sm font-medium">9</span>
+</div>
+<div class="h-32 p-3 border-r border-b border-surface-container bg-surface-container-low/50">
+<span class="text-sm font-medium">10</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Details Sidebar / Lesson Info -->
+<div class="col-span-4 space-y-6">
+<!-- Availability Toggle Card -->
+<div class="bg-primary text-on-primary p-6 rounded-3xl shadow-xl shadow-primary/20 relative overflow-hidden">
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-3xl">event_available</span>
+<span class="bg-white/20 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">Sistema en Vivo</span>
+</div>
+<h4 class="font-headline text-xl mb-2">Modo Disponibilidad</h4>
+<p class="text-on-primary/70 text-sm mb-6 leading-relaxed">Habilita cupos para el calendario del próximo mes. Se notificará a los instructores para confirmar sus horarios.</p>
+<button class="w-full py-3 bg-white text-primary font-bold rounded-xl text-sm transition-transform active:scale-95">Abrir Gestor de Disponibilidad</button>
+</div>
+<!-- Decorative element -->
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+</div>
+<!-- Active Selection Detail -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 shadow-sm border border-surface-container">
+<div class="flex items-center justify-between mb-6">
+<h4 class="font-label text-xs uppercase tracking-widest text-stone-500">Clase Seleccionada</h4>
+<span class="text-[10px] bg-primary-fixed text-on-primary-fixed px-2 py-0.5 rounded uppercase font-bold tracking-tighter">Individual</span>
+</div>
+<div class="flex items-center gap-4 mb-8">
+<img class="w-16 h-16 rounded-2xl object-cover shadow-md" data-alt="close-up of a majestic brown horse with a braided mane against a stable background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqlF2rNgbU7mfMjLXnhUzmYTucW2YfLTBwibWOqVN_xJoajS1wO06Mq5EpOzoeQpxiT1eXtLS-fsvtwnAtOZ6y2ZoEF0fr-lYkRkRSaEambo6gl3ZUg6w1IjD-PHlP190xVC2keWx-vnJJ8dRnhfAVLSEKzypF7tyo7DRt6jbLTM8nOH-6PDc1_nla9u6cmlMJUZELe0t6X8DaFP2tvM63op3wNo4PLEEISCcCk95jCQZ7Ny4gbvCpI3uyKDGSfVrJJx4ZUHSy27FM"/>
+<div>
+<h5 class="font-headline text-lg">Altanero II</h5>
+<p class="text-sm text-stone-500">Caballo Asignado</p>
+</div>
+</div>
+<div class="space-y-6">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary">person</span>
+<div>
+<p class="text-xs text-stone-500 font-medium">Instructor</p>
+<p class="text-sm font-bold">Mateo Valenzuela</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary">face</span>
+<div>
+<p class="text-xs text-stone-500 font-medium">Estudiante</p>
+<p class="text-sm font-bold">Benjamín Soto (Nivel 3)</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary">payments</span>
+<div>
+<p class="text-xs text-stone-500 font-medium">Estado del Pago</p>
+<div class="flex items-center gap-2">
+<span class="text-sm font-bold text-primary">$45.000 CLP</span>
+<span class="text-[10px] bg-primary/10 text-primary px-2 py-0.5 rounded-full font-bold">PAGADO</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-10 pt-6 border-t border-surface-container grid grid-cols-2 gap-3">
+<button class="py-3 px-4 rounded-xl bg-surface-container-high text-on-surface text-sm font-bold hover:bg-surface-variant transition-colors">Reprogramar</button>
+<button class="py-3 px-4 rounded-xl bg-error/10 text-error text-sm font-bold hover:bg-error/20 transition-colors">Cancelar</button>
+</div>
+</div>
+<!-- Conflict Alert Section -->
+<div class="bg-error-container/30 p-5 rounded-3xl border border-error/10">
+<div class="flex items-center gap-2 text-error mb-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">report</span>
+<h4 class="text-sm font-bold">2 Conflictos Activos</h4>
+</div>
+<p class="text-xs text-on-error-container/80 leading-relaxed mb-4">El caballo "Luna" tiene clases superpuestas a las 10:00 AM el 5 de Nov.</p>
+<button class="text-xs font-bold text-error underline underline-offset-4">Resolver Problemas</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action for Mobile (Hidden on Web as per hierarchy) -->
+<div class="md:hidden fixed bottom-6 right-6 z-50">
+<button class="w-14 h-14 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">add</span>
+</button>
+</div>
+</body></html>

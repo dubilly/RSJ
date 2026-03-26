@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Equus Chile | Editorial Ecuestre</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-background": "#1c1c19",
+              "error": "#ba1a1a",
+              "primary-container": "#2d5a27",
+              "surface-container-low": "#f6f3ee",
+              "on-error-container": "#93000a",
+              "error-container": "#ffdad6",
+              "on-error": "#ffffff",
+              "on-primary": "#ffffff",
+              "background": "#fcf9f4",
+              "inverse-primary": "#a1d494",
+              "surface-tint": "#3b6934",
+              "primary": "#154212",
+              "surface-container-highest": "#e5e2dd",
+              "on-tertiary-fixed": "#261900",
+              "on-surface": "#1c1c19",
+              "on-secondary": "#ffffff",
+              "outline": "#72796e",
+              "tertiary": "#483611",
+              "on-surface-variant": "#42493e",
+              "surface": "#fcf9f4",
+              "tertiary-fixed-dim": "#dfc392",
+              "surface-container-high": "#ebe8e3",
+              "primary-fixed": "#bcf0ae",
+              "outline-variant": "#c2c9bb",
+              "surface-container-lowest": "#ffffff",
+              "inverse-on-surface": "#f3f0eb",
+              "on-tertiary-fixed-variant": "#57441e",
+              "secondary": "#79573f",
+              "tertiary-fixed": "#fcdfab",
+              "surface-variant": "#e5e2dd",
+              "surface-bright": "#fcf9f4",
+              "on-tertiary-container": "#dbbf8e",
+              "on-primary-fixed": "#002201",
+              "secondary-fixed": "#ffdcc6",
+              "inverse-surface": "#31302d",
+              "tertiary-container": "#614d26",
+              "on-secondary-container": "#7a5840",
+              "secondary-fixed-dim": "#eabda0",
+              "on-primary-fixed-variant": "#23501e",
+              "on-secondary-fixed": "#2d1604",
+              "on-secondary-fixed-variant": "#5f402a",
+              "surface-dim": "#dcdad5",
+              "secondary-container": "#ffd1b3",
+              "surface-container": "#f0ede8",
+              "on-primary-container": "#9dd090",
+              "on-tertiary": "#ffffff",
+              "primary-fixed-dim": "#a1d494"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0px 12px 32px rgba(28, 28, 25, 0.06);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary selection:text-white">
+<!-- Top Navigation Bar -->
+<header class="docked full-width top-0 z-50 bg-[#fcf9f4] dark:bg-stone-950 editorial-shadow sticky">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-serif font-bold text-[#154212] dark:text-emerald-500">
+            RSJ La Dehesa
+        </div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-[#154212] dark:text-emerald-400 border-b-2 border-[#154212] pb-1 font-bold" href="#">Inicio</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#154212] transition-colors" href="#">Carreras</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#154212] transition-colors" href="#">Caballerizas</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#154212] transition-colors" href="#">Directorio</a>
+</nav>
+<div class="flex items-center gap-6">
+<span class="hidden lg:block font-label label-md uppercase tracking-wider text-primary font-bold">Próxima carrera: 12d 04h</span>
+<div class="flex items-center gap-3">
+<button class="material-symbols-outlined p-2 hover:bg-stone-100 dark:hover:bg-stone-800 transition-all duration-300 rounded-full cursor-pointer active:scale-95">notifications</button>
+<button class="material-symbols-outlined p-2 hover:bg-stone-100 dark:hover:bg-stone-800 transition-all duration-300 rounded-full cursor-pointer active:scale-95">settings</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-outline-variant/20">
+<img alt="Perfil de Administrador" class="w-full h-full object-cover" data-alt="retrato de primer plano de un administrador ecuestre profesional en traje formal con un fondo suave al aire libre" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTc-fq3jRE1NY2L-pFDD_Vo3Yhr0cBqxMQM-SN-T2XxXdRBqAqtTAEyscfAYx334j_LNY7HSOfBd0zO1W9GwG8gcOynXbOk-CKBwdQO8kQg1XSfSsSeHYb6Ot9zWfmjlqbAbaSh_zkqhLgpHQtaiWpwFrHpUyuNVs0hAXd7fBSLGYpdODYYspuwJzwp0VKNUPlhH1OtVSvkrOjCtPZHTIc4GdB7uQVJcKIDTejI9annzlhS9NAA-nQz-k-TwBbndEfJJtjHCJaLRA8"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex flex-col justify-center px-8 lg:px-24 py-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Acción de Endurance Equus Chile" class="w-full h-full object-cover brightness-[0.85]" data-alt="Toma de acción de un jinete de endurance recibiendo botellas de agua mientras galopa por un sendero junto al río durante una competencia." src="https://lh3.googleusercontent.com/aida/ADBb0uipeVWF38NFwaYIkyAP38K1FtiGgejohQIAqAlE56gudIj5Kz4e29B8IHdBKU6xylhdc7Yb6u74Vx9HrxgnjZCN8NyUBgh82k-4jzOxBt1dEDVINDf4y7uZ3AtZNmocKrNr-NDtv27e5OVDTfS28RKJHH9g05BrBlPOkOwU3xjsf2bt5KkzuQwTFX5n0wESl4YXqtbj3k2sfkRrZk3slHUVnX_E-fI3W0rawK2FEvEOe657Lcy04CEaJte1q3genVWc2ioBQDncI8Q"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background/60 via-background/20 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-3xl">
+<p class="font-label label-md uppercase tracking-[0.2em] text-secondary mb-4 font-bold">Tradición Ecuestre Chilena</p>
+<h1 class="font-headline text-5xl md:text-7xl text-primary leading-tight mb-8">
+                Elevando el Arte de la <br/>
+<span class="italic font-normal">Equitación.</span>
+</h1>
+<div class="inline-flex items-center gap-4 bg-primary-container/90 backdrop-blur-md text-white px-6 py-4 rounded-xl editorial-shadow mb-10">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>event</span>
+<span class="font-body text-lg font-medium tracking-wide">Próxima carrera: Endurance Atacama – Abril 2026</span>
+</div>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-10 py-5 rounded-xl font-bold tracking-wide text-lg hover:shadow-xl hover:translate-y-[-2px] transition-all duration-300 flex items-center gap-3">
+                    Ingreso Usuarios
+                    <span class="material-symbols-outlined">login</span>
+</button>
+<button class="bg-surface-container-highest text-primary px-10 py-5 rounded-xl font-bold tracking-wide text-lg hover:bg-surface-container-high transition-all">
+                    Explorar Club
+                </button>
+</div>
+</div>
+</section>
+<!-- About Section (Editorial Layout) -->
+<section class="py-32 px-8 lg:px-24 bg-surface flex flex-col lg:flex-row gap-20 items-center">
+<div class="w-full lg:w-1/2 relative">
+<div class="aspect-[4/5] rounded-xl overflow-hidden editorial-shadow relative z-10">
+<img alt="Equipo ecuestre y caballos en Equus Chile" class="w-full h-full object-cover" data-alt="Un grupo de personas de pie con caballos en un campo al atardecer, celebrando una victoria con trofeos." src="https://lh3.googleusercontent.com/aida/ADBb0ujUDB9m2HnPkcr7RNPnaUFWS7zZAWkfQDFpvdpWsP4L26ca4Ablv2sQm7chbNifjyHQWrSIxMxwPJ6wHSut-QIw2vmzLvhR5TMucZ9VfsMHmJOAtfTvPAZacniueia9illOFhcGcI8juxtI0Ui2eQnbJnQ_qCUrWx9GSc5R8izSHkeyrNELNw8Le2pn77l2Ya61MB87Kz_dkxfSj4ZfBcIVuFtkPZ-Gge5ZqFZthlWPNg_3DhOFG479aDv8v76QnfwXYzYB8hCi9g"/>
+</div>
+<div class="absolute -bottom-10 -right-10 w-2/3 aspect-square bg-surface-container-high rounded-xl -z-0"></div>
+<div class="absolute -top-6 -left-6 border-2 border-secondary/20 w-32 h-32 rounded-lg -z-0"></div>
+</div>
+<div class="w-full lg:w-1/2">
+<p class="font-label label-md uppercase tracking-[0.2em] text-secondary mb-4 font-bold">Sobre Nosotros</p>
+<h2 class="font-headline text-4xl md:text-5xl text-on-background mb-8 leading-tight">Forjando un legado en las laderas de la Dehesa.</h2>
+<div class="space-y-6 text-on-surface-variant text-lg leading-relaxed font-light">
+<p>En RSJ Chile, la equitación no es solo un deporte; es un diálogo silencioso entre el jinete y el noble bruto. Nuestra filosofía de enseñanza se basa en el respeto mutuo, la técnica refinada y la preservación de las tradiciones del campo chileno.</p>
+<p>Desde nuestras pistas de entrenamiento hasta las rutas de endurance más exigentes, ofrecemos un entorno donde la excelencia y la naturaleza convergen para crear una experiencia ecuestre sin igual en la región.</p>
+</div>
+<div class="mt-12 flex gap-12">
+<div>
+<p class="text-4xl font-headline text-primary mb-1">8+</p>
+<p class="font-label label-md text-stone-500">Años de Tradición</p>
+</div>
+<div>
+<p class="text-4xl font-headline text-primary mb-1">30</p>
+<p class="font-label label-md text-stone-500">Caballos Residentes</p>
+</div>
+<div>
+<p class="text-4xl font-headline text-primary mb-1">5</p>
+<p class="font-label label-md text-stone-500">Instructores Senior</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section (Bento Grid) -->
+<section class="py-32 px-8 lg:px-24 bg-surface-container-low">
+<div class="text-center mb-20">
+<p class="font-label label-md uppercase tracking-[0.2em] text-secondary mb-4 font-bold">Nuestros Servicios</p>
+<h2 class="font-headline text-4xl md:text-5xl text-primary">Excelencia en Cada Disciplina</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[800px]">
+<!-- Main Service -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-2xl editorial-shadow bg-surface-container-lowest">
+<img alt="Clases de Equitación" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-75" data-alt="jinete saltando un obstáculo en una pista exterior soleada durante una sesión de entrenamiento matutina" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9esl8EuJNm49vEZdv5SL4VO_rCj3p7-Q2QOf88pY9PW84morczejjRKMYQ7A-B3I8L5ZippadN7CrxAPKRt0K15S1fZKJNz12cz5jtS2wyOVBj_Ee6rwTFRo7Fzpjn2gibYwF0Xn6OoLLmVBXLlPA4zJ4w2JaeEytiRVPG7DKh2N7xhCa8IhbwE06tPoQhqNeTSzi_Xp0gU6pMAEp8DI4I5s8x9lYYw90iCZVKG77aKEH_kM8Nw3u_1YHmBDeAZqLLY0dlXOhWLiw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10 text-white">
+<p class="font-label label-md uppercase mb-2 tracking-widest text-primary-fixed">Formación Integral</p>
+<h3 class="font-headline text-3xl mb-4 italic">Clases de Equitación</h3>
+<p class="max-w-md opacity-80 font-light mb-6">Programas personalizados para todos los niveles. Desde la iniciación para niños hasta perfeccionamiento en salto y adiestramiento para adultos.</p>
+<button class="bg-white text-primary px-6 py-3 rounded-lg font-bold flex items-center gap-2 hover:bg-primary-fixed transition-colors">
+                        Saber Más <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Side Service 1 -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-2xl editorial-shadow bg-tertiary">
+<img alt="Endurance" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-60" data-alt="toma panorámica de jinetes de endurance cruzando un paisaje polvoriento en el norte de Chile al atardecer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFgPElDWX4KH6SavazMeUN9fCO7YB1Q8TLU8r3z5cTrVQoiq8WJ-K6tSJb08UyhlKxwh_0WyiFooGCUrb-uNPFJOyMyo0sbpLnLwFQwtzkzsnmr3iROMHhCrnyE_MVJ9tX6cQJawzIREVHux9joq8QYuurukE93GDTd3utp1fW0u-GD8aQ83jhlfAGndNf02F3fzon_fR-lUO66wUhvXOrbV3pSCMUbhng-KGQ5n46qUQ0M9O6ScraUj0BQqHYx6d9_5XfrwBAZxm1"/>
+<div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
+<h3 class="font-headline text-2xl mb-2">Eventos de Endurance</h3>
+<p class="opacity-80 text-sm font-light mb-4">Lideramos el circuito nacional con competencias de alto rendimiento y logística de clase mundial.</p>
+<a class="text-primary-fixed font-bold flex items-center gap-2" href="#">Ver Calendario <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+</div>
+</div>
+<!-- Side Service 2 -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-2xl editorial-shadow bg-surface">
+<div class="p-8 h-full flex flex-col">
+<span class="material-symbols-outlined text-primary text-4xl mb-6" style='font-variation-settings: "FILL" 1;'>home_storage</span>
+<h3 class="font-headline text-2xl text-on-surface mb-3">Gestión de Pesebreras</h3>
+<p class="text-on-surface-variant font-light mb-auto">Infraestructura premium para el cuidado y hospedaje de su ejemplar. Nutrición controlada y veterinaria 24/7.</p>
+<div class="mt-6 pt-6 border-t border-outline-variant/30 flex items-center gap-4">
+<div class="flex -space-x-3">
+<div class="w-8 h-8 rounded-full border-2 border-white bg-primary-container"></div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-secondary"></div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-tertiary"></div>
+</div>
+<span class="text-sm font-label text-stone-500">+80 Dueños confían en nosotros</span>
+</div>
+</div>
+</div>
+<!-- Side Service 3 (Wide) -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-2xl editorial-shadow bg-white flex flex-col md:flex-row">
+<div class="md:w-1/2 p-10 flex flex-col justify-center">
+<h3 class="font-headline text-2xl text-primary mb-4">Clínicas &amp; Talleres</h3>
+<p class="text-on-surface-variant font-light mb-6">Sesiones intensivas con expertos internacionales sobre psicología equina y biomecánica aplicada.</p>
+<button class="text-secondary font-bold flex items-center gap-2 group-hover:translate-x-2 transition-transform">
+                        Inscribirse ahora <span class="material-symbols-outlined">trending_flat</span>
+</button>
+</div>
+<div class="md:w-1/2 relative h-48 md:h-full">
+<img alt="Talleres" class="absolute inset-0 w-full h-full object-cover" data-alt="primer plano de una mano acariciando suavemente el hocico de un caballo en un establo con motas de polvo bailando en los rayos del sol" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrIAgI4zbOtj-9StDipXVg1p7jMR4_Od4SP-ISY8qZnpkm_aqnlaMxwaU4PRN3qWi8DPutuTzXsDbquFLjWpeZ567IhlgTtI07LyK1-jEXcZdTpVyKYWyf3RmNlAiCUBqYqJE1bNl6XnwWq_CnDAvISiwhBAV61oT_i30_wYkBvRWZL27LJSROVaL1vNpI-jFkmUkwfS7HfNlrPcfKLpLsrQY-S72RejV7zTqPD_RUsmWMkzZWyeMlF6Jt2DpMQO5PqJSheH_RCAG9"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Dynamic Map/Location Preview -->
+<section class="relative py-20 bg-surface">
+<div class="max-w-screen-2xl mx-auto px-8 lg:px-24">
+<div class="bg-surface-container rounded-3xl overflow-hidden editorial-shadow flex flex-col lg:flex-row">
+<div class="lg:w-1/3 p-12 lg:p-16 flex flex-col justify-center">
+<p class="font-label label-md text-secondary uppercase tracking-widest mb-4">Nuestra Ubicación</p>
+<h2 class="font-headline text-3xl text-primary mb-6">El Corazón de Colina</h2>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary">location_on</span>
+<div>
+<p class="font-bold">Camino Los Establos #450</p>
+<p class="text-on-surface-variant text-sm">Sector Chicureo, Colina. Región Metropolitana.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary">schedule</span>
+<div>
+<p class="font-bold">Horarios de Visita</p>
+<p class="text-on-surface-variant text-sm">Lun - Vie: 08:00 - 20:00<br/>Sáb - Dom: 09:00 - 18:00</p>
+</div>
+</div>
+</div>
+<button class="mt-10 bg-primary text-white py-4 rounded-xl font-bold editorial-shadow hover:bg-primary/90 transition-all">Ver en Google Maps</button>
+</div>
+<div class="lg:w-2/3 h-[400px] lg:h-auto grayscale hover:grayscale-0 transition-all duration-700">
+<img alt="Mapa de Ubicación" class="w-full h-full object-cover" data-alt="vista aérea estilizada de una gran finca rural con pastos verdes y corrales de entrenamiento redondos" data-location="Santiago, Chile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArWdpHIlqcrfyffSU4n-6gtFNvY5nFD_4PP6GRu6csQnSLi4Q2YgSzvPKBhvaISMjDX6QKr4Jeku6Pt4Rdmqv7Bnzf2fuEieI_YazHt7UoEjrDGvBgsM3zx3sqTafBTeewm8VRYOK0_s4uaOsSFyu_R1TTVnxY5Ipu566vyCukyR8FnPgCXwSohqpBmsv6-RvxWDnkrfF6UgdeYt4N4t5vRIxx_kqQTHF-3ruT63qw1jBavTqbBVQmxmyG-4cQH6XuOaeS8hcNLPz-"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-white pt-24 pb-12 px-8 lg:px-24">
+<div class="max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
+<div class="col-span-1 md:col-span-1">
+<h2 class="font-headline text-2xl mb-6">Equus Chile</h2>
+<p class="text-on-primary-container/80 font-light leading-relaxed mb-8">Elevando el estándar de la equitación chilena a través de la pasión, la educación y el respeto por el caballo.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">camera</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">mail</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-label label-md uppercase tracking-widest mb-8 text-primary-fixed">Navegación</h4>
+<ul class="space-y-4 opacity-80 font-light">
+<li><a class="hover:text-primary-fixed transition-colors" href="#">Sobre el Club</a></li>
+<li><a class="hover:text-primary-fixed transition-colors" href="#">Servicios Ecuestres</a></li>
+<li><a class="hover:text-primary-fixed transition-colors" href="#">Calendario Endurance</a></li>
+<li><a class="hover:text-primary-fixed transition-colors" href="#">Membresías</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label label-md uppercase tracking-widest mb-8 text-primary-fixed">Portal Usuarios</h4>
+<ul class="space-y-4 opacity-80 font-light">
+<li><a class="hover:text-primary-fixed transition-colors" href="#">Portal Admin</a></li>
+<li><a class="hover:text-primary-fixed transition-colors" href="#">Área Profesores</a></li>
+<li><a class="hover:text-primary-fixed transition-colors" href="#">Acceso Apoderados</a></li>
+<li><a class="hover:text-primary-fixed transition-colors" href="#">Registro Alumnos</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label label-md uppercase tracking-widest mb-8 text-primary-fixed">Newsletter</h4>
+<p class="text-sm opacity-80 mb-6">Reciba noticias sobre eventos y clínicas directamente en su correo.</p>
+<form class="flex flex-col gap-3">
+<input class="bg-white/10 border-none rounded-lg py-3 px-4 text-white placeholder:text-white/40 focus:ring-2 focus:ring-primary-fixed" placeholder="Su correo electrónico" type="email"/>
+<button class="bg-primary-fixed text-primary font-bold py-3 rounded-lg hover:bg-white transition-colors">Suscribirse</button>
+</form>
+</div>
+</div>
+<div class="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-sm opacity-60">
+<p>© 2024 Equus Chile. Todos los derechos reservados.</p>
+<div class="flex gap-8">
+<a class="hover:underline" href="#">Privacidad</a>
+<a class="hover:underline" href="#">Términos y Condiciones</a>
+<a class="hover:underline" href="#">Soporte</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

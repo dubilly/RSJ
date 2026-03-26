@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Equus Chile | Panel de Administración</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-background": "#1c1c19",
+              "error": "#ba1a1a",
+              "primary-container": "#2d5a27",
+              "surface-container-low": "#f6f3ee",
+              "on-error-container": "#93000a",
+              "error-container": "#ffdad6",
+              "on-error": "#ffffff",
+              "on-primary": "#ffffff",
+              "background": "#fcf9f4",
+              "inverse-primary": "#a1d494",
+              "surface-tint": "#3b6934",
+              "primary": "#154212",
+              "surface-container-highest": "#e5e2dd",
+              "on-tertiary-fixed": "#261900",
+              "on-surface": "#1c1c19",
+              "on-secondary": "#ffffff",
+              "outline": "#72796e",
+              "tertiary": "#483611",
+              "on-surface-variant": "#42493e",
+              "surface": "#fcf9f4",
+              "tertiary-fixed-dim": "#dfc392",
+              "surface-container-high": "#ebe8e3",
+              "primary-fixed": "#bcf0ae",
+              "outline-variant": "#c2c9bb",
+              "surface-container-lowest": "#ffffff",
+              "inverse-on-surface": "#f3f0eb",
+              "on-tertiary-fixed-variant": "#57441e",
+              "secondary": "#79573f",
+              "tertiary-fixed": "#fcdfab",
+              "surface-variant": "#e5e2dd",
+              "surface-bright": "#fcf9f4",
+              "on-tertiary-container": "#dbbf8e",
+              "on-primary-fixed": "#002201",
+              "secondary-fixed": "#ffdcc6",
+              "inverse-surface": "#31302d",
+              "tertiary-container": "#614d26",
+              "on-secondary-container": "#7a5840",
+              "secondary-fixed-dim": "#eabda0",
+              "on-primary-fixed-variant": "#23501e",
+              "on-secondary-fixed": "#2d1604",
+              "on-secondary-fixed-variant": "#5f402a",
+              "surface-dim": "#dcdad5",
+              "secondary-container": "#ffd1b3",
+              "surface-container": "#f0ede8",
+              "on-primary-container": "#9dd090",
+              "on-tertiary": "#ffffff",
+              "primary-fixed-dim": "#a1d494"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        background-color: #fcf9f4;
+        color: #1c1c19;
+      }
+      .asymmetric-grid {
+        display: grid;
+        grid-template-columns: 1fr 350px;
+        gap: 2rem;
+      }
+      @media (max-width: 1024px) {
+        .asymmetric-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+</head>
+<body class="font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- SideNavBar -->
+<aside class="bg-[#f6f3ee] dark:bg-stone-900 h-screen w-64 fixed left-0 top-0 flex flex-col no-border tonal-shift flat no shadows py-6 gap-2">
+<div class="px-6 mb-8">
+<h1 class="font-serif text-xl text-[#154212] font-bold">Club Hípico</h1>
+<p class="font-['Manrope'] text-[0.65rem] uppercase tracking-wider text-stone-500 font-bold">Portal de Administración</p>
+</div>
+<nav class="flex-grow flex flex-col gap-1">
+<a class="bg-[#154212] text-white rounded-lg mx-2 px-4 py-3 flex items-center gap-3 cubic-bezier(0.4, 0, 0.2, 1) hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Manrope'] label-md uppercase tracking-wider">Panel</span>
+</a>
+<a class="text-stone-600 dark:text-stone-400 hover:bg-stone-200 dark:hover:bg-stone-800 rounded-lg mx-2 px-4 py-3 flex items-center gap-3 cubic-bezier(0.4, 0, 0.2, 1) hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+<span class="font-['Manrope'] label-md uppercase tracking-wider">Gestión Académica</span>
+</a>
+<a class="text-stone-600 dark:text-stone-400 hover:bg-stone-200 dark:hover:bg-stone-800 rounded-lg mx-2 px-4 py-3 flex items-center gap-3 cubic-bezier(0.4, 0, 0.2, 1) hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-['Manrope'] label-md uppercase tracking-wider">Estudiantes</span>
+</a>
+<a class="text-stone-600 dark:text-stone-400 hover:bg-stone-200 dark:hover:bg-stone-800 rounded-lg mx-2 px-4 py-3 flex items-center gap-3 cubic-bezier(0.4, 0, 0.2, 1) hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="badge">badge</span>
+<span class="font-['Manrope'] label-md uppercase tracking-wider">Profesores</span>
+</a>
+<a class="text-stone-600 dark:text-stone-400 hover:bg-stone-200 dark:hover:bg-stone-800 rounded-lg mx-2 px-4 py-3 flex items-center gap-3 cubic-bezier(0.4, 0, 0.2, 1) hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-['Manrope'] label-md uppercase tracking-wider">Registros de Pago</span>
+</a>
+<a class="text-stone-600 dark:text-stone-400 hover:bg-stone-200 dark:hover:bg-stone-800 rounded-lg mx-2 px-4 py-3 flex items-center gap-3 cubic-bezier(0.4, 0, 0.2, 1) hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="shelves">shelves</span>
+<span class="font-['Manrope'] label-md uppercase tracking-wider">Mapa de Pesebreras</span>
+</a>
+<a class="text-stone-600 dark:text-stone-400 hover:bg-stone-200 dark:hover:bg-stone-800 rounded-lg mx-2 px-4 py-3 flex items-center gap-3 cubic-bezier(0.4, 0, 0.2, 1) hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-['Manrope'] label-md uppercase tracking-wider">Reportes</span>
+</a>
+</nav>
+<div class="px-4 mt-auto">
+<button class="w-full py-3 bg-secondary text-white rounded-xl flex items-center justify-center gap-2 mb-6 hover:bg-tertiary transition-colors">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+<span class="font-semibold text-sm">Nueva Inscripción</span>
+</button>
+<div class="flex flex-col gap-1 border-t border-stone-200 pt-4">
+<a class="text-stone-600 text-sm flex items-center gap-3 px-2 py-2 hover:bg-stone-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+                    Centro de Ayuda
+                </a>
+<a class="text-error text-sm flex items-center gap-3 px-2 py-2 hover:bg-red-50 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+                    Cerrar Sesión
+                </a>
+</div>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="ml-64 min-h-screen p-8">
+<!-- Top Header Navigation -->
+<header class="flex justify-between items-center mb-10">
+<div>
+<p class="font-label text-[0.7rem] uppercase tracking-widest text-secondary font-bold mb-1">Gestión del Recinto</p>
+<h2 class="font-headline text-3xl font-bold text-on-surface">Bienvenida, Constanza</h2>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex bg-surface-container rounded-full px-4 py-2 items-center gap-3">
+<span class="material-symbols-outlined text-outline" data-icon="search">search</span>
+<input class="bg-transparent border-none outline-none text-sm w-48 focus:ring-0" placeholder="Buscar estudiante o caballo..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative cursor-pointer hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="notifications">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-error rounded-full border-2 border-surface"></span>
+</div>
+<img alt="Constanza Duhalde" class="w-10 h-10 rounded-full object-cover ring-2 ring-primary ring-offset-2" data-alt="professional portrait of a sophisticated woman with dark hair wearing a beige blazer in a bright office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRF-QsLXm8lqAUH9Nt_n06QRgfpORLxrcapjXzzDmeLfGIwv2FfWPEPVrLSIvUaXnaU_XD_iHGOrIFzUfv9iwrW0fDasf7RFE1FiMo41QowS0LuDTPUeGVYz5EZfuQZazH49SPfxRWRGMBX0s33I2ymTvqkngT8iaKR-Ygw5uo4n5dSQcz1c8Eoaqh-G0gYTFHBbe-l1w1jN6wDSpvhtZTlmYZSY586lZBwZD8ayKBw0oqr-l4FW24D2BiOlv6rtRHqCurLSycTQK3"/>
+</div>
+</div>
+</header>
+<!-- Stats Summary -->
+<section class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+<div class="bg-surface-container-lowest p-6 rounded-xl border-l-4 border-primary shadow-[0px_12px_32px_rgba(28,28,25,0.04)]">
+<p class="text-[0.65rem] uppercase tracking-widest text-outline font-bold mb-1">Estudiantes Activos</p>
+<div class="flex items-end justify-between">
+<span class="text-3xl font-headline font-bold text-on-surface">142</span>
+<span class="text-primary text-xs flex items-center font-bold">+12% <span class="material-symbols-outlined text-sm" data-icon="trending_up">trending_up</span></span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl border-l-4 border-secondary shadow-[0px_12px_32px_rgba(28,28,25,0.04)]">
+<p class="text-[0.65rem] uppercase tracking-widest text-outline font-bold mb-1">Profesores Expertos</p>
+<div class="flex items-end justify-between">
+<span class="text-3xl font-headline font-bold text-on-surface">18</span>
+<span class="text-outline text-xs flex items-center font-bold">Estable</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl border-l-4 border-tertiary shadow-[0px_12px_32px_rgba(28,28,25,0.04)]">
+<p class="text-[0.65rem] uppercase tracking-widest text-outline font-bold mb-1">Cupos de Pesebreras</p>
+<div class="flex items-end justify-between">
+<span class="text-3xl font-headline font-bold text-on-surface">54/60</span>
+<span class="text-error text-xs flex items-center font-bold">Limitado</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl border-l-4 border-primary shadow-[0px_12px_32px_rgba(28,28,25,0.04)]">
+<p class="text-[0.65rem] uppercase tracking-widest text-outline font-bold mb-1">Ingresos Mensuales</p>
+<div class="flex items-end justify-between">
+<span class="text-2xl font-headline font-bold text-on-surface">$12,840</span>
+<span class="text-primary text-xs flex items-center font-bold">+4% <span class="material-symbols-outlined text-sm" data-icon="arrow_upward">arrow_upward</span></span>
+</div>
+</div>
+</section>
+<div class="asymmetric-grid">
+<!-- Left Column: Approvals & Usage -->
+<div class="space-y-10">
+<!-- Pending Approvals -->
+<div class="bg-surface-container-low rounded-xl p-8 shadow-[0px_4px_16px_rgba(0,0,0,0.02)]">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-headline text-xl font-bold">Aprobaciones Pendientes</h3>
+<button class="text-primary text-sm font-semibold hover:underline">Ver Todo</button>
+</div>
+<div class="overflow-hidden">
+<table class="w-full text-left">
+<thead>
+<tr class="text-[0.65rem] uppercase tracking-widest text-outline border-b border-surface-container-high">
+<th class="pb-4 font-bold">Solicitante</th>
+<th class="pb-4 font-bold">Rol</th>
+<th class="pb-4 font-bold">Fecha</th>
+<th class="pb-4 text-right font-bold">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<tr class="group hover:bg-surface-container-highest/30 transition-colors">
+<td class="py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed font-bold text-xs">MA</div>
+<div>
+<p class="text-sm font-bold">Mateo Alvear</p>
+<p class="text-[0.7rem] text-outline">Postulante a estudiante</p>
+</div>
+</div>
+</td>
+<td class="py-4 text-sm font-medium">Estudiante</td>
+<td class="py-4 text-sm text-outline">Oct 12, 2023</td>
+<td class="py-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-2 text-primary hover:bg-primary-container/10 rounded-lg transition-colors" title="Aprobar">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+</button>
+<button class="p-2 text-error hover:bg-error-container/20 rounded-lg transition-colors" title="Rechazar">
+<span class="material-symbols-outlined" data-icon="cancel">cancel</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="group hover:bg-surface-container-highest/30 transition-colors">
+<td class="py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed font-bold text-xs">SV</div>
+<div>
+<p class="text-sm font-bold">Sofia Vicuña</p>
+<p class="text-[0.7rem] text-outline">Especialista en Adiestramiento</p>
+</div>
+</div>
+</td>
+<td class="py-4 text-sm font-medium">Profesor</td>
+<td class="py-4 text-sm text-outline">Oct 11, 2023</td>
+<td class="py-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-2 text-primary hover:bg-primary-container/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+</button>
+<button class="p-2 text-error hover:bg-error-container/20 rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="cancel">cancel</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="group hover:bg-surface-container-highest/30 transition-colors">
+<td class="py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed font-bold text-xs">JP</div>
+<div>
+<p class="text-sm font-bold">Juan Pablo Mackenna</p>
+<p class="text-[0.7rem] text-outline">Apoderado</p>
+</div>
+</div>
+</td>
+<td class="py-4 text-sm font-medium">Apoderado</td>
+<td class="py-4 text-sm text-outline">Oct 10, 2023</td>
+<td class="py-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-2 text-primary hover:bg-primary-container/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+</button>
+<button class="p-2 text-error hover:bg-error-container/20 rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="cancel">cancel</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Horse Availability -->
+<div class="bg-surface-container-low rounded-xl p-8 shadow-[0px_4px_16px_rgba(0,0,0,0.02)]">
+<h3 class="font-headline text-xl font-bold mb-6">Estado y Disponibilidad de Caballos</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-6">
+<div>
+<div class="flex justify-between text-sm mb-2">
+<span class="font-semibold">Caballos de Entrenamiento</span>
+<span class="text-outline">24/30 Activos</span>
+</div>
+<div class="w-full h-3 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-1000" style="width: 80%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-sm mb-2">
+<span class="font-semibold">Equipo de Enduro</span>
+<span class="text-outline">12/12 Ocupados</span>
+</div>
+<div class="w-full h-3 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full transition-all duration-1000" style="width: 100%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-sm mb-2">
+<span class="font-semibold">Pesebreras de Invitados/Tránsito</span>
+<span class="text-outline">4/10 Ocupadas</span>
+</div>
+<div class="w-full h-3 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary rounded-full transition-all duration-1000" style="width: 40%"></div>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center p-6 border-l border-surface-container-high ml-4">
+<div class="relative w-32 h-32 flex items-center justify-center mb-4">
+<svg class="w-full h-full -rotate-90">
+<circle class="text-surface-container-highest" cx="64" cy="64" fill="transparent" r="58" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-primary" cx="64" cy="64" fill="transparent" r="58" stroke="currentColor" stroke-dasharray="364.4" stroke-dashoffset="36.4" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-2xl font-bold">90%</span>
+<span class="text-[0.6rem] uppercase font-bold text-outline">Capacidad</span>
+</div>
+</div>
+<p class="text-center text-xs text-outline leading-relaxed max-w-[180px]">6 pesebreras totales disponibles para nuevas inscripciones temporales.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Actions & Event Preview -->
+<div class="space-y-10">
+<!-- Quick Actions -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0px_12px_32px_rgba(28,28,25,0.06)] border border-surface-container-high">
+<h3 class="font-headline text-lg font-bold mb-6">Acciones Rápidas</h3>
+<div class="grid grid-cols-1 gap-3">
+<button class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-low hover:bg-primary-container hover:text-white transition-all group">
+<span class="material-symbols-outlined p-2 bg-primary/10 text-primary rounded-lg group-hover:bg-white/20 group-hover:text-white" data-icon="add_task">add_task</span>
+<span class="text-sm font-semibold">Crear Nueva Clase</span>
+</button>
+<button class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-low hover:bg-secondary hover:text-white transition-all group">
+<span class="material-symbols-outlined p-2 bg-secondary/10 text-secondary rounded-lg group-hover:bg-white/20 group-hover:text-white" data-icon="event">event</span>
+<span class="text-sm font-semibold">Agregar Carrera</span>
+</button>
+<button class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-low hover:bg-tertiary hover:text-white transition-all group">
+<span class="material-symbols-outlined p-2 bg-tertiary/10 text-tertiary rounded-lg group-hover:bg-white/20 group-hover:text-white" data-icon="chat">chat</span>
+<span class="text-sm font-semibold">Enviar Alerta WhatsApp</span>
+</button>
+</div>
+</div>
+<!-- Next Event Preview -->
+<div class="bg-primary-container text-white rounded-xl overflow-hidden relative group">
+<img alt="Enduro Atacama" class="w-full h-48 object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" data-alt="dramatic wide shot of riders on horseback crossing the vast Atacama desert dunes during sunset with deep orange light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBy2YQM0s4OaOfZIfWn_UF2vp50gv16dlkpY2jFdpA4uct4ifBMT2ZR369CYXSRPovRizJoICMDJzg4F_puS8qBN53ZgCy_HvQwQA0K8bDe9Exv04ASOa5YbkBpu01k7OzOLxkUfwnW6Y75TpRbFQmSrKqjLW8usXq0HCzNJe88bJVsW4c0VMhYLrgwZcOp0q-1ISibC0TqNGVNnS1UWMyDBP0MRhnxWQMvJAR69tsrhOwQ1uT1uTcX3w6UrK8AjoWdZJF3E-UT7L_f"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container via-transparent to-transparent"></div>
+<div class="p-6 relative z-10">
+<span class="inline-block px-3 py-1 bg-secondary text-[0.65rem] uppercase tracking-widest font-bold rounded-full mb-3">Próximo Evento</span>
+<h4 class="font-headline text-2xl font-bold mb-1">Enduro Atacama</h4>
+<p class="text-on-primary-container text-xs mb-6">Circuito internacional de alto rendimiento</p>
+<div class="space-y-3 mb-6">
+<div class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-sm opacity-70" data-icon="calendar_today">calendar_today</span>
+<span>24 de Noviembre, 2023</span>
+</div>
+<div class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-sm opacity-70" data-icon="location_on">location_on</span>
+<span>San Pedro de Atacama, CL</span>
+</div>
+<div class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-sm opacity-70" data-icon="group">group</span>
+<span>42 Jinetes Inscritos</span>
+</div>
+</div>
+<button class="w-full py-3 bg-white text-primary font-bold rounded-lg hover:bg-inverse-primary transition-colors">
+                            Gestionar Evento
+                        </button>
+</div>
+</div>
+<!-- Small Activity Log -->
+<div class="p-4 border border-surface-container-high rounded-xl">
+<h5 class="text-[0.65rem] uppercase tracking-widest text-outline font-bold mb-4">Registros Recientes del Sistema</h5>
+<ul class="space-y-4">
+<li class="flex gap-3 items-start">
+<div class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5"></div>
+<p class="text-xs leading-relaxed"><span class="font-bold">Personal:</span> Juan S. actualizó el estado de la Pesebrera 4 a 'Mantenimiento'.</p>
+</li>
+<li class="flex gap-3 items-start">
+<div class="w-1.5 h-1.5 rounded-full bg-secondary mt-1.5"></div>
+<p class="text-xs leading-relaxed"><span class="font-bold">Pagos:</span> Se generaron 12 facturas mensuales automáticas.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</main>
+</body></html>
